@@ -84,3 +84,75 @@
   Salve o Tricolor Paulista!!!
 </div>
 </ng-template>
+
+<form [formGroup]="registerForm">
+  <div class="row">
+    <div class="form-group col-md-12">
+      <label>Tema</label>
+      <input type="text" class="form-control" formControlName="tema" placeholder="Insira o Tema">
+       <div class="invalid-feedback">
+        Tema é Obrigatório!
+       </div>
+    </div>
+   </div>
+  <div class="row">
+    <div class="form-group col-md-8">
+      <label>Local</label>
+      <input type="text" class="form-control"  formControlName="local" placeholder="Insira o Local">
+      <div class="invalid-feedback">
+        Local é Obrigatório!
+    </div>
+    </div>
+      <div class="form-group col-md-4">
+        <label>Data e Hora</label>
+        <input type="text" class="form-control"  formControlName="dataEvento" placeholder="Insira Data e Hora">
+        <div class="invalid-feedback">
+          Data e Hora é Obrigatório!
+        </div>
+      </div>
+    </div>
+  <div class="row">
+    <div class="form-group col-md-3">
+      <label>Qtd Pessoas</label>
+      <input type="text" class="form-control"  formControlName="qtdPessoas" placeholder="Insira Quantidade de Pessoas">
+      <div class="invalid-feedback">
+        Quantidade de Pessoas é Obrigatório!
+    </div>
+  </div>
+    <div class="form-group col-md-9">
+      <label>Imagem</label>
+      <input type="text" class="form-control"  formControlName="imagemURL" placeholder="Insira Imagem">
+      <div class="invalid-feedback">
+        Imagem é Obrigatório!
+    </div>
+  </div>
+</div>
+    <div class="row">
+    <div class="form-group col-md-4">
+      <label>Telefone</label>
+      <input type="text" class="form-control"  formControlName="telefone" placeholder="Digite o Telefone">
+      <div class="invalid-feedback">
+        Telefone é Obrigatório!
+      </div>
+    </div>
+    <div class="form-group col-md-8">
+      <label>Email</label>
+      <input type="text" class="form-control"  formControlName="email" placeholder="Digite o Email">
+      <div class="invalid-feedback">
+        Email é Obrigatório!
+      </div>
+    </div>
+  </div>
+</form>
+
+
+<br>
+<button class="btn btn-secondary" (click)="openModal(template)">
+  Fechar
+</button>
+<button class="btn btn-primary" (click)="salvarAlteracao()">
+  Salvar Alterações
+</button>
+<br>
+<br>
+
